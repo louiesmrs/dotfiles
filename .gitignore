@@ -5,7 +5,7 @@
 ### macOS ###
 # General
 **/.DS_Store
-**/.mdb
+*.mdb
 Brewfile.lock.json
 
 nushell/history*
@@ -14,4 +14,10 @@ gh
 menus
 github-copilot
 uv
+**/tags
+**/test.sh
+**/.luarc.json
+
+**/spell/
+**/lazy-lock.json
 
