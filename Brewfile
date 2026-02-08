@@ -1,4 +1,3 @@
-tap "nikitabobko/tap"
 brew "bat"
 brew "black"
 brew "carapace"
@@ -15,18 +14,20 @@ brew "kind"
 brew "kubecolor"
 brew "kubectx"
 brew "mergiraf"
-brew "minikube"
 brew "neovim"
 brew "nushell"
 brew "poppler"
 brew "ripgrep"
 brew "starship"
 brew "television"
-brew "tmux"
 brew "wget"
 brew "yq"
 brew "zoxide"
 brew "rustup"
+brew "btop"
+
+on_macos do
+tap "nikitabobko/tap"
 cask "nikitabobko/tap/aerospace"
 cask "maccy"
 cask "meetingbar"
@@ -38,7 +39,7 @@ cask "zed"
 cask "firefox"
 cask "wezterm"
 cask "obsidian"
-
+end
 
 
 go "github.com/go-delve/delve/cmd/dlv"
