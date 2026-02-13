@@ -1,0 +1,36 @@
+ls
+nu config
+config nu
+$env.config.buffer_editor nvim
+$env.config.buffer_editor = 'nvim'
+config nu
+nvim 
+$env.config.buffer_editor = 'vi'
+$env.PATH<\n>| split row (char esep)<\n>| to nuon --indent 4
+$nu.env-path
+$nu.config-path
+config nu
+zsh 
+ls
+nu config
+config nu
+$env.config.buffer_editor
+$env.config.buffer_editor = 'vi'
+config nu
+nu --no-history
+config nu
+$env.config.buffer_editor = 'vi'
+config nu
+$env.config.buffer_editor = 'vi'
+config nu
+config env
+go
+echo $ZOTERO_API_KEY
+ls
+vim config.nu
+str
+split
+str
+vim env.nu
+vim privatevars.nu
+pi
