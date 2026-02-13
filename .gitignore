@@ -1,0 +1,23 @@
+
+## dotenv ###
+.env
+
+### macOS ###
+# General
+**/.DS_Store
+*.mdb
+Brewfile.lock.json
+
+nushell/history*
+nushell/privatevars.nu
+gh
+menus
+github-copilot
+uv
+**/tags
+**/test.sh
+**/.luarc.json
+
+**/spell/
+**/lazy-lock.json
+

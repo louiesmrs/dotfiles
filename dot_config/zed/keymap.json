@@ -1,0 +1,133 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {}
+  },
+  {
+    "context": "Dock || Editor ",
+    "bindings": {
+      // Window's motions
+      "cmd-ctrl-h": "workspace::ActivatePaneLeft",
+      "cmd-ctrl-l": "workspace::ActivatePaneRight",
+      "cmd-ctrl-k": "workspace::ActivatePaneUp",
+      "cmd-ctrl-j": "workspace::ActivatePaneDown",
+
+      "ctrl-n": "pane::ActivateNextItem",
+      "ctrl-p": "pane::ActivatePreviousItem",
+
+      "ctrl-w v": "pane::SplitRight",
+      "ctrl-w s": "pane::SplitDown",
+      "ctrl-w q": "pane::CloseActiveItem",
+
+      "cmd-i": "workspace::ToggleRightDock",
+      "\\": "workspace::ToggleLeftDock",
+
+      "alt-,": "vim::ResizePaneRight",
+      "alt-.": "vim::ResizePaneLeft",
+      "ctrl-cmd-,": [
+        "workspace::SendKeystrokes",
+        "alt-, alt-, alt-, alt-, alt-,"
+      ],
+      "ctrl-cmd-.": [
+        "workspace::SendKeystrokes",
+        "alt-. alt-. alt-. alt-. alt-."
+      ],
+      "ctrl-cmd-t": "vim::ResizePaneUp",
+      "ctrl-cmd-s": "vim::ResizePaneDown"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g b": "pane::GoBack"
+    }
+  },
+  {
+    "context": "(VimControl || (!Editor && !Terminal))",
+    "bindings": {
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+
+      "ctrl-,": ["workspace::SendKeystrokes", "alt-, alt-, alt-, alt-, alt-,"],
+      "ctrl-.": ["workspace::SendKeystrokes", "alt-. alt-. alt-. alt-. alt-."],
+      "ctrl-t": "vim::ResizePaneUp",
+      "ctrl-s": "vim::ResizePaneDown"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g r": "editor::FindAllReferences"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "space r n": "editor::Rename"
+    }
+  },
+  {
+    "context": "(vim_mode == normal && !menu)",
+    "bindings": {
+      "space s f": [
+        "task::Spawn",
+        { "task_name": "File Finder", "reveal_target": "center" }
+      ],
+      "space s g": [
+        "task::Spawn",
+        { "task_name": "Find in Files", "reveal_target": "center" }
+      ],
+      "ctrl-w s": "pane::SplitDown",
+      "ctrl-w v": "pane::SplitRight",
+      "ctrl-w q": "pane::CloseAllItems",
+      "space b": "git::Blame"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      // New terminal
+      "ctrl-a n": "workspace::NewTerminal",
+
+      "ctrl-n": "pane::ActivateNextItem",
+      "ctrl-p": "pane::ActivatePreviousItem",
+
+      // Split navigation
+      "cmd-ctrl-h": "workspace::ActivatePaneLeft",
+      "cmd-ctrl-l": "workspace::ActivatePaneRight",
+      "cmd-ctrl-k": "workspace::ActivatePaneUp",
+      "cmd-ctrl-j": "workspace::ActivatePaneDown",
+
+      // Split creation
+      "ctrl-a v": "pane::SplitRight",
+      "ctrl-a s": "pane::SplitDown",
+
+      "cmd-i": "workspace::ToggleRightDock",
+      "\\": "workspace::ToggleLeftDock",
+      // Toggle zoom
+      "ctrl-a f": "workspace::ToggleZoom",
+
+      // Send Ctrl+A to terminal (using workspace::SendKeystrokes instead of terminal_write)
+      "space ctrl-a": ["workspace::SendKeystrokes", "cmd-b"]
+      // Pane resizing
+
+      // "cmd-alt-,": "workspace::DecreaseActiveDockSize",
+      // "cmd-alt-.": "workspace::IncreaseActiveDockSize"
+    }
+  }
+]

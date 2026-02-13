@@ -1,0 +1,364 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "\\",
+        "command": "multiCommand.toggleActivityAndStatus",
+        "when": "editorHasTypeDefinitionProvider && editorTextFocus && neovim.init && neovim.mode != 'insert' || terminalFocus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.previousEditor"
+    },
+    {
+        "key": "ctrl+cmd+t",
+        "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+a n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+`",
+        "command": "-workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "shift+cmd+k",
+        "command": "workbench.action.terminal.kill"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "cmd+n",
+        "command": "-workbench.action.files.newUntitledFile"
+    },
+    {
+        "key": "f12",
+        "command": "-editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "-workbench.action.navigateBack",
+        "when": "canNavigateBack"
+    },
+    {
+        "key": "ctrl+cmd+h",
+        "command": "workbench.action.replaceInFiles"
+    },
+    {
+        "key": "ctrl+cmd+h",
+        "command": "-workbench.action.replaceInFiles",
+        "when": "chatViewletFocus || chatInputFocus || chatViewFocus || panelFocus"
+    },
+    {
+        "key": "shift+cmd+h",
+        "command": "-workbench.action.replaceInFiles"
+    },
+    {
+        "key": "g h",
+        "command": "references-view.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider  && editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "shift+alt+h",
+        "command": "-references-view.showCallHierarchy",
+        "when": "editorHasCallHierarchyProvider"
+    },
+    {
+        "key": "g r",
+        "command": "editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space r n",
+        "command": "editor.action.rename",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space shift+D",
+        "command": "editor.action.goToTypeDefinition",
+        "when": "editorHasTypeDefinitionProvider && editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "g b",
+        "command": "workbench.action.navigateBack",
+        "when": "canNavigateBack && editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "g f",
+        "command": "workbench.action.navigateForward",
+        "when": "canNavigateBack && editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "shift+f12",
+        "command": "-editor.action.goToReferences",
+        "when": "editorHasReferenceProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    {
+        "key": "g shift+i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "cmd+f12",
+        "command": "-editor.action.goToImplementation",
+        "when": "editorHasImplementationProvider && editorTextFocus"
+    },
+    {
+        "key": "space s g",
+        "command": "find-it-faster.findWithinFiles",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space s f",
+        "command": "find-it-faster.findFiles",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space b",
+        "command": "git.blame.toggleEditorDecoration",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "alt+g",
+        "command": "vscode-neovim.send",
+        "when": "editorTextFocus && neovim.init && focusedView == 'workbench.panel.output' && neovim.mode != 'insert'"
+    },
+    {
+        "key": "g",
+        "command": "-vscode-neovim.send",
+        "when": "editorTextFocus && neovim.init && focusedView == 'workbench.panel.output' && neovim.mode != 'insert'"
+    },
+    {
+        "key": "cmd j",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus && !terminalEditorFocus"
+    },
+    {
+        "key": "ctrl+a n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+h",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+l",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+k",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+j",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+,",
+        "command": "workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+.",
+        "command": "workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+t",
+        "command": "workbench.action.terminal.resizePaneUp",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+ctrl+s",
+        "command": "workbench.action.terminal.resizePaneDown",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a v",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+a ctrl+a",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0001"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "space h o",
+        "command": "vscode-harpoon.editorQuickPick",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space h a",
+        "command": "vscode-harpoon.addEditor",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space h e",
+        "command": "vscode-harpoon.editEditors",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space h 1",
+        "command": "vscode-harpoon.gotoEditor1",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space h 2",
+        "command": "vscode-harpoon.gotoEditor2",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space h 3",
+        "command": "vscode-harpoon.gotoEditor3",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space h 3",
+        "command": "vscode-harpoon.gotoEditor4",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space p a",
+        "command": "projectManager.saveProject",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space p o",
+        "command": "projectManager.listProjectsNewWindow",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "space p e",
+        "command": "projectManager.editProjects",
+        "when": "editorTextFocus && neovim.init && neovim.mode != 'insert'"
+    },
+    // Directional Navigation - Context Aware
+    // From Editor
+    {
+        "key": "ctrl+cmd+h",
+        "command": "workbench.view.explorer",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+cmd+l",
+        "command": "workbench.panel.chat.view.copilot.focus",
+        "when": "editorTextFocus"
+    },
+    // From File Explorer
+    {
+        "key": "ctrl+cmd+l",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+cmd+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "explorerViewletFocus"
+    },
+    // From Terminal
+    {
+        "key": "ctrl+cmd+k",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+h",
+        "command": "workbench.view.explorer",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+cmd+l",
+        "command": "workbench.panel.chat.view.copilot.focus",
+        "when": "terminalFocus"
+    },
+    // From Chat Panel (try multiple context options)
+    {
+        "key": "ctrl+cmd+h",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "panelFocus && activePanel == 'workbench.panel.chat'"
+    },
+    {
+        "key": "ctrl+cmd+h",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "chatInputFocus"
+    },
+    {
+        "key": "ctrl+cmd+h",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "inChat"
+    },
+    {
+        "key": "ctrl+cmd+j",
+        "command": "workbench.action.terminal.focus",
+        "when": "panelFocus && activePanel == 'workbench.panel.chat'"
+    },
+    {
+        "key": "ctrl+,",
+        "command": "workbench.action.decreaseViewWidth",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "workbench.action.increaseViewWidth",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+s",
+        "command": "workbench.action.decreaseViewHeight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.increaseViewHeight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+i",
+        "command": "workbench.action.toggleAuxiliaryBar"
+    },
+    {
+        "key": "alt+cmd+b",
+        "command": "-workbench.action.toggleAuxiliaryBar"
+    }
+]
