@@ -8,8 +8,13 @@
 *.mdb
 Brewfile.lock.json
 
-nushell/history*
-nushell/privatevars.nu
+# Local state and generated files under the chezmoi source tree
+/dot_config/nushell/history*
+/dot_config/nvim/lazy-lock.json
+/dot_config/nvim/doc/tags
+/dot_config/zed/prompts/prompts-library-db.0.mdb/
+/dot_config/nushell/privatevars.nu
+
 gh
 menus
 github-copilot
@@ -20,4 +25,3 @@ uv
 
 **/spell/
 **/lazy-lock.json
-
