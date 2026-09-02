@@ -26,7 +26,6 @@ brew "yq"
 brew "zoxide"
 brew "rustup"
 brew "btop"
-brew "chezmoi"
 brew "gh"
 brew "deno"
 
