@@ -24,14 +24,14 @@ let homebrew_prefix = if $nu.os-info.name == 'linux' {
 } else {
   '/opt/homebrew'
 }
-path add ($homebrew_prefix | path join 'bin')
-path add ($homebrew_prefix | path join 'sbin')
 path add /usr/local/bin
 path add /usr/local/go/bin
 path add ~/.local/bin
 path add ~/go/bin
 path add ~/.cargo/bin
 path add /usr/local/opt/rustup/bin
+path add ($homebrew_prefix | path join 'sbin')
+path add ($homebrew_prefix | path join 'bin')
 
 if (($homebrew_prefix | path type) == 'dir') {
   $env.HOMEBREW_PREFIX = $homebrew_prefix
