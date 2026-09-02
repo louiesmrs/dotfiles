@@ -1,5 +1,7 @@
 require('oil').setup {
   columns = { 'icon' },
+  skip_confirm_for_simple_edits = true,
+  watch_for_changes = true,
   keymaps = {
     ['<C-h>'] = false,
     ['<C-l>'] = false,

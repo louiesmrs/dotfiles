@@ -80,6 +80,7 @@ alias gco = git checkout
 alias gb = git branch
 alias gl = git log --oneline --graph
 alias gdiff = git diff
+alias gtl = cd (git rev-parse --show-toplevel)
 
 #---Jujutsu------
 alias jd = jj desc

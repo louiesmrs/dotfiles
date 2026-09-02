@@ -6,9 +6,10 @@ config.front_end = "WebGpu"
 config.webgpu_power_preference = "HighPerformance"
 
 -- Set Nushell as the default shell
--- This path is standard for Mac with Apple Silicon
--- To find the path on your system, run `which nu` in Terminal.app
-config.default_prog = { "/opt/homebrew/bin/nu" }
+local nushell_path = wezterm.target_triple:find("linux")
+	and "/var/home/linuxbrew/.linuxbrew/bin/nu"
+	or "/opt/homebrew/bin/nu"
+config.default_prog = { nushell_path }
 
 -- Get the home directory (works on both macOS and Windows)
 local home = os.getenv("HOME") or os.getenv("USERPROFILE") or ""

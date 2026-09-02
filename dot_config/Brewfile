@@ -9,6 +9,7 @@ brew "fzf"
 brew "go"
 brew "jj"
 brew "jq"
+brew "yq"
 brew "node"
 brew "kind"
 brew "kubecolor"
@@ -25,20 +26,28 @@ brew "yq"
 brew "zoxide"
 brew "rustup"
 brew "btop"
+brew "chezmoi"
+brew "gh"
+brew "deno"
 
-on_macos do
-tap "nikitabobko/tap"
-cask "nikitabobko/tap/aerospace"
-cask "maccy"
-cask "meetingbar"
-cask "font-jetbrains-mono"
-cask "obs"
-cask "spotify"
-cask "visual-studio-code"
-cask "zed"
-cask "firefox"
-cask "wezterm"
-cask "obsidian"
+if RUBY_PLATFORM.include?("darwin")
+  tap "nikitabobko/tap"
+  cask "nikitabobko/tap/aerospace"
+  cask "maccy"
+  cask "meetingbar"
+  cask "font-jetbrains-mono"
+  cask "obs"
+  cask "spotify"
+  cask "visual-studio-code"
+  cask "zed"
+  cask "firefox"
+  cask "wezterm@nightly"
+  cask "obsidian"
+end
+
+if RUBY_PLATFORM.include?("linux")
+  tap "wezterm/wezterm-linuxbrew"
+  brew "wezterm", args: ["HEAD"]
 end
 
 
