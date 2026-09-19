@@ -4,13 +4,6 @@ This repository contains my configuration files and is managed with [chezmoi](ht
 
 ## macOS
 
-Install Apple's command-line tools and Homebrew:
-
-```console
-xcode-select --install
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
 Install chezmoi and apply this repository:
 
 ```console
