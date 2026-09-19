@@ -2,6 +2,17 @@
 
 This repository contains my configuration files and is managed with [chezmoi](https://www.chezmoi.io/).
 
+## Homebrew package management
+
+
+```console
+brew bundle install --cleanup --file="$HOME/.config/Brewfile" --no-lock
+```
+
+For temporary software, use the normal `brew install` command. It will be
+removed automatically the next time the Brewfile is synchronized. See
+[this Brewfile guide](https://matthiasportzel.com/brewfile/) for more context.
+
 ## macOS
 
 Install chezmoi and apply this repository:
@@ -9,12 +20,6 @@ Install chezmoi and apply this repository:
 ```console
 brew install chezmoi
 chezmoi init --apply https://github.com/louiesmrs/dotfiles.git
-```
-
-Install the packages from the managed Brewfile:
-
-```console
-brew bundle --file="$HOME/.config/Brewfile"
 ```
 
 Apply macOS defaults:
@@ -30,12 +35,6 @@ Install chezmoi and apply this repository:
 ```console
 brew install chezmoi
 chezmoi init --apply https://github.com/louiesmrs/dotfiles.git
-```
-
-Install the packages from the managed Brewfile:
-
-```console
-brew bundle --file="$HOME/.config/Brewfile"
 ```
 
 Log out and back in, or restart the terminal, after applying the configuration so
