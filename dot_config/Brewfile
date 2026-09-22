@@ -32,6 +32,8 @@ brew "deno"
 if RUBY_PLATFORM.include?("darwin")
   tap "nikitabobko/tap"
   cask "nikitabobko/tap/aerospace"
+  cask "docker-desktop"
+  cask "helium"
   cask "maccy"
   cask "meetingbar"
   cask "font-jetbrains-mono"
