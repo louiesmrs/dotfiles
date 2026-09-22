@@ -1,6 +1,7 @@
 brew "bat"
 brew "black"
 brew "carapace"
+brew "chezmoi"
 brew "cmake"
 brew "difftastic"
 brew "eza"
