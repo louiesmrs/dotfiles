@@ -17,8 +17,6 @@ local home = os.getenv("HOME") or os.getenv("USERPROFILE") or ""
 -- Set XDG_CONFIG_HOME environment variable for Nushell
 config.set_environment_variables = {
 	XDG_CONFIG_HOME = home .. "/.config",
-} -- Shell integration
-config.set_environment_variables = {
 	TERM_PROGRAM = "WezTerm",
 }
 

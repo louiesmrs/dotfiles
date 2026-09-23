@@ -697,8 +697,8 @@ else
                 configuration = {
                   runtimes = {
                     {
-                      name = 'JavaSE-21',
-                      path = '/opt/jdk-21',
+                      name = 'JavaSE-27',
+                      path = '/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home',
                       default = true,
                     },
                   },
@@ -751,7 +751,12 @@ else
         })
         require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
-        require('java').setup {}
+        require('java').setup {
+          jdk = {
+            auto_install = false,
+            path = '/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home'
+          }
+        }
 
         require('mason-lspconfig').setup {
           ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
